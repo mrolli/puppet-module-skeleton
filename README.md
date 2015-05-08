@@ -18,6 +18,8 @@ As we don't want to have our .git files and this README in our skeleton, we expo
     cd puppet-module-skeleton
     find skeleton -type f | git checkout-index --stdin --force --prefix="$HOME/.puppet/var/puppet-module/" --
 
+The very last command is covered by the install.sh script within the toplevel directory.
+
 ## Usage
 
 Then just generate your new module structure like so:
@@ -55,5 +57,4 @@ Of particular interst should be:
 
 ## Thanks
 
-The trick used in the installation above, and a few other bits came from
-another excellent module skeleton from [spiette](https://github.com/spiette/puppet-module-skeleton)
+This puppet module skeleton is heavily influenced (shamelessly copied) from garethr (https://github.com/garethr/puppet-module-skeleton/).
