@@ -1,8 +1,9 @@
 # == Class <%= metadata.name %>::install
 #
+# This class is called from <%= metadata.name %> for installation.
 class <%= metadata.name %>::install {
 
-  package { $<%= metadata.name %>::package_name:
+  package { $::<%= metadata.name %>::package_name:
     ensure => present,
   }
 }

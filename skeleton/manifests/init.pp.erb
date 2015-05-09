@@ -10,12 +10,12 @@
 class <%= metadata.name %> (
   $package_name = $<%= metadata.name %>::params::package_name,
   $service_name = $<%= metadata.name %>::params::service_name,
-) inherits <%= metadata.name %>::params {
+) inherits ::<%= metadata.name %>::params {
 
   # validate parameters here
 
-  class { '<%= metadata.name %>::install': } ->
-  class { '<%= metadata.name %>::config': } ~>
-  class { '<%= metadata.name %>::service': } ->
-  Class['<%= metadata.name %>']
+  class { '::<%= metadata.name %>::install': } ->
+  class { '::<%= metadata.name %>::config': } ~>
+  class { '::<%= metadata.name %>::service': } ->
+  Class['::<%= metadata.name %>']
 }
